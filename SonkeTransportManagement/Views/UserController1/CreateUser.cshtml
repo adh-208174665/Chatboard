@@ -1,0 +1,46 @@
+﻿
+<h3 style="text-align:center">Create New User</h3>
+<hr style="color:orangered" />
+@using (Html.BeginForm("SaveUser", "UserController1", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <br />
+    <p style="color:orangered">User Details</p>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" name="firstname" id="firstname" placeholder="First name">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Last name" name="lastname" id="lastname">
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Section" name="section" id="section">
+        </div>
+        <div class="col">
+            <input name="position" id="position" type="text" class="form-control" placeholder="Position">
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Contact" name="contact" id="contact">
+        </div>
+        <div class="col">
+
+            @Html.DropDownList("Id", ViewData["RoleList"] as SelectList, "-- Select Category --", new { @class = "form-control", id = "Id", name = "Id" })
+
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col">
+            <input type="email" class="form-control" name="Email" id="Email" placeholder="Email">
+        </div>
+
+    </div>
+    <br />
+    <button style="width:300px" class="btn  btn-success" type="submit">Submit</button>
+
+}

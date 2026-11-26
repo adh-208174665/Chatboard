@@ -1,0 +1,124 @@
+﻿
+<h3 style="text-align:center">Vehicle Request Form</h3>
+<hr style="color:orangered" />
+
+    <br />
+    <p style="color:orangered">Requester Details</p>
+    <div class="row">
+        <div class="col">
+        <input disabled value="@ViewBag.FirstName " class="form-control" name="firstname" id="firstname" placeholder="First name" />
+        </div>
+        <div class="col">
+            <input disabled value="@ViewBag.LastName" class="form-control" placeholder="Last name" name="lastname" id="lastname" />
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col">
+        <input value="@ViewBag.Section" disabled type="text" class="form-control" placeholder="Section" name="section" id="section">
+        </div>
+        <div class="col">
+        <input value="@ViewBag.Position" disabled name="position" id="position" type="text" class="form-control" placeholder="Position">
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col">
+            <input disabled value="@ViewBag.Contact" type="text" class="form-control" placeholder="Contact" name="contact" id="contact">
+        </div>       
+    </div>
+    <br />
+  
+    <p style="color:orangered">Trip Details</p>
+    <div class="row">
+        <div class="col">
+        <input disabled value="@ViewBag.Reason" name="Reason" id="Reason" type="text" class="form-control" placeholder="Reason For Trip">
+        </div>
+        <div class="col">
+            <input disabled type="text" class="form-control" name="NumTravellers" id="NumTravellers" placeholder="Number of travellers">
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col">
+        <input value="@ViewBag.Destination" disabled name="destination" id="destination" type="text" class="form-control" placeholder="Destination">
+        </div>
+        <div class="col">
+        <input value="@ViewBag.EstimatedKilos" disabled name="EstiKilos" id="EstiKilos" type="text" class="form-control" placeholder="Estimated Kilometers">
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col">
+            <input value="@ViewBag.DepatureDate" disabled name="DepatureDate" id="DepatureDate" type="datetime" class="form-control" placeholder="Collection Date">
+        </div>
+        <div class="col">
+        <input value="@ViewBag.ReturnDate" disabled type="datetime" class="form-control" placeholder="Return Date" name="returnDate" id="returnDate">
+        </div>
+    </div>
+ 
+    <br />
+    <p style="color:orangered">Requester comments</p>
+    <div class="row">
+        <div class="col">
+        <input value="@ViewBag.RequesterComments" disabled name="Comments" id="Comments" type="text" class="form-control" placeholder="Comments">
+        </div>
+
+    </div>
+    <br />
+<hr style="color:orangered" />
+@using (Html.BeginForm("UpdateApproveRequest", "Approval", new { id = @ViewBag.Id }, FormMethod.Post))
+{
+    <div class="card">
+       
+    <div class="row">
+        <div class="col">
+            <p style="color:orangered">Reject Request</p>
+                <input value="Rejected" name="Reject" id="Reject" type="radio" placeholder="Reject">
+        </div>
+        <div class="col">
+            <p style="color:orangered">Approve Request</p>
+                <input value="Approved" name="Approve" id="Approve" type="radio" placeholder="Approve">
+        </div>
+
+    </div>
+    <br />
+    <div class="row">
+        <div class="col">
+            <input  name="Comments" id="Comments" type="text" class="form-control" placeholder="Comments">
+        </div>
+
+    </div>
+    <br />
+    <div class="row">
+        <div class="col">
+                <input value="Submit" style="width:300px" class="btn  btn-success" type="submit" />@* Submit</input> *@
+        
+           @*  <button style="" class="btn  btn-danger" type="submit">Reject</button> *@
+        </div>
+    </div>
+
+    </div>
+
+}
+<style>
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 100%;
+        border-radius: 5px;
+        padding:16px
+    }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+    img {
+        border-radius: 5px 5px 0 0;
+    }
+
+    .container {
+        padding: 2px 16px;
+    }
+</style>

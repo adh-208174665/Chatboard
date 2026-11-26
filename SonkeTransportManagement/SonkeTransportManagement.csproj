@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\images\sonke-logo-1-e1750750283255.webp" />
+    <Content Remove="wwwroot\images\Sonke-Logos-fc-on-black-bg-01-1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\sonke-logo-1-e1750750283255.webp" />
+    <None Include="wwwroot\images\Sonke-Logos-fc-on-black-bg-01-1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.1" />
+    <PackageReference Include="Microsoft.SqlServer.Server" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,82 @@
+﻿
+<h3 style="text-align:center">Flight Request Form</h3>
+<hr style="color:orangered" />
+@using (Html.BeginForm("SaveFlightRequest", "Request", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <br />
+    <p style="color:orangered">Requester Details</p>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" name="firstname" id="firstname" placeholder="First name">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Last name" name="lastname" id="lastname">
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Section" name="section" id="section">
+        </div>
+        <div class="col">
+            <input name="position" id="position" type="text" class="form-control" placeholder="Position">
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Contact" name="contact" id="contact">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Altenative Contact">
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col">
+            <input type="email" class="form-control" name="Email" id="Email" placeholder="Email">
+        </div>
+
+    </div>
+    <br />
+    <p style="color:orangered">Trip Details</p>
+    <div class="row">
+        <div class="col">
+            <input name="Reason" id="Reason" type="text" class="form-control" placeholder="Reason For Trip">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" name="NumTravellers" id="NumTravellers" placeholder="Number of travellers">
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col">
+            <input name="destination" id="destination" type="text" class="form-control" placeholder="Destination">
+        </div>
+        <div class="col">
+            <input name="EstiKilos" id="EstiKilos" type="text" class="form-control" placeholder="Estimated Kilometers">
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col">
+            <dat name="DepatureDate" id="DepatureDate" type="datetime-local" class="form-control" placeholder="Departure Date">
+        </div>
+        <div class="col">
+            <input type="datetime-local" class="form-control" placeholder="Return Date" name="returnDate" id="returnDate">
+        </div>
+    </div>
+    <br />
+
+    <br />
+    <p style="color:orangered">Provide comments if available</p>
+    <div class="row">
+        <div class="col">
+            <input name="Comments" id="Comments" type="text" class="form-control" placeholder="Comments">
+        </div>
+
+    </div>
+    <br />
+    <button style="width:300px" class="btn  btn-success" type="submit">Submit Request</button>
+
+}
